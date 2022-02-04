@@ -142,7 +142,6 @@ public class Oop5{
 	   v1.display();
 	   System.out.print(v1.getName());
 	   v1.move();
-	   
 	  
     }
    }
