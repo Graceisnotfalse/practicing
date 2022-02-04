@@ -70,8 +70,42 @@ class Villain0 extends Person0 {
 	   public double getPower() { return power;}; 
 	   
 	   void display() {
-		   System.out.println("이름 : " + getName() + ",나이 : " + getAge() + ",키 : " +getHeight() + ",몸무게 : " + getWeight() + ",번호 : " + getUnique_key() + ",무기: " + getWeapon() +",파워: " + getPower());
+		   System.out.println("이름 : " + getName());
+		   System.out.println("나이 : " + getAge());
+		   System.out.println("키 : " + getHeight());
+		   System.out.println("몸무게 : " + getWeight());
+		   System.out.println("번호 : "  + getUnique_key());
+		   System.out.println("무기 : " +getWeaponName(getWeapon()));
+		   System.out.println("파워 : " + getPower());
+		   
 	   }
+	   
+	   void move() {
+		   System.out.println("악당은 2배빠르게 걸어간다");
+	   }
+	   
+	   String getWeaponName(int a) {
+		   String weapon;
+		   switch(a) {
+		   case 1 : 
+			   weapon = "칼";
+			   break;
+		   case 2 :
+			   weapon = "창";
+			   break;
+		   case 3 :
+			   weapon = "방패";
+			   break;
+			   default :
+				   weapon = "---";
+				   break;
+		   
+		   }
+		   return weapon;
+	   }
+	   
+	   
+
 }
 class Hero0 extends Person0{
 	    //필드
@@ -96,12 +130,19 @@ public class Oop5{
 	   System.out.println(p0.getName());
 	   p0.move();
 	   
-	   Villain0 v0 = new Villain0("좀비",100,490,192,"1500-12-31",1,99.5);
+	   Villain0 v0 = new Villain0("좀비",100,490,192,"1500-12-31",4,99.5);
 	   v0.display();
-	   
+	   System.out.print(v0.getName());
+	   v0.move();
 	  // Hero0 h0 = new Hero0("귀신");
 	  // h0.move();
 	  // h0.display();
+	   System.out.println("---------------------------");
+	   Villain0 v1 = new Villain0("귀신",3910,163	,48,"1663-04-29",2,77.0);
+	   v1.display();
+	   System.out.print(v1.getName());
+	   v1.move();
+	   
 	  
     }
    }
